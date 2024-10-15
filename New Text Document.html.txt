@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random Sentence</title>
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            background: url('https://drive.google.com/file/d/1SlwCBFADgHXTrheFL4-QVmMH00VulG1i/view?usp=sharing') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        .container {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            width: 90%;
+            max-width: 400px;
+        }
+
+        h1 {
+            font-size: 1.5em;
+            color: #333;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+            background-color: #007BFF;
+            color: white;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background-color: #0056b3;
+        }
+
+        /* Mobile-friendly adjustments */
+        @media only screen and (max-width: 600px) {
+            h1 {
+                font-size: 1.2em;
+            }
+
+            button {
+                font-size: 0.9em;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+    <script>
+        function getRandomSentence() {
+            const sentences = [
+                "This is sentence one.",
+                "Here is sentence two.",
+                "Another sentence for you.",
+                "This is yet another example sentence."
+            ];
+            const randomIndex = Math.floor(Math.random() * sentences.length);
+            document.getElementById("random-sentence").textContent = sentences[randomIndex];
+        }
+    </script>
+</head>
+<body onload="getRandomSentence()">
+    <div class="container">
+        <h1 id="random-sentence"></h1>
+        <button onclick="window.location.href='https://https://drive.google.com/drive/folders/1eyAqgD6j5ThloQv1U4ZUPXp5-CIGWQ9k?usp=sharing';">
+            Open Google Drive Folder
+        </button>
+    </div>
+</body>
+</html>
